@@ -2,13 +2,23 @@
   "name": "autotests_pw_ts",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:api": "yarn playwright test tests/api",
+    "test:e2e": "yarn playwright test tests/e2e",
+    "report": "allure generate allure-results -o allure-report --clean"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.48.2",
-    "@types/node": "^22.8.5"
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.8.5",
+    "allure-commandline": "^2.32.0",
+    "allure-playwright": "^3.0.7",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
