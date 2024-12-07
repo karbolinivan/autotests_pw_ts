@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { AuthPage } from "../../../src/pageObject/authPage"
 import { TEST_USER } from "../../../src/testData";
-import { Resource } from "../../../src/pageObject";
+import { Pages } from "../../../src/pageObject";
 import * as allure from "allure-js-commons";
 
 
@@ -14,7 +14,7 @@ test.describe('Авторизация', async() => {
             { name: allure.LabelName.EPIC, value: 'Авторизация и регистрация' },
             { name: allure.LabelName.FEATURE, value: 'Авторизация' },
         );
-        authPage = new Resource().getAuthPage(page);
+        authPage = new Pages().authPage(page);
     })
 
     test('Авторизация тестового пользователя', async() => {

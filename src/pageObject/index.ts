@@ -1,1 +1,1 @@
-export { Resource } from "./Resource"
+export { Pages } from "./Pages"

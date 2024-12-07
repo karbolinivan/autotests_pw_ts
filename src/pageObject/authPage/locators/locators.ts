@@ -1,4 +1,4 @@
-import {AuthButtonsLocators, AuthInputsLocators, AuthLocators} from "./types";
+import { AuthButtonsLocators, AuthInputsLocators, AuthLocators } from "./types";
 
 // Локаторы инпутов для страницы Auth
 const authInputsLocators: AuthInputsLocators = {

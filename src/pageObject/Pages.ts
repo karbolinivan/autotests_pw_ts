@@ -1,8 +1,8 @@
 import { AuthPage } from "./authPage";
 import { Page } from "@playwright/test";
 
-export class Resource {
-    public getAuthPage(page: Page): AuthPage {
+export class Pages {
+    public authPage(page: Page): AuthPage {
         return new AuthPage(page)
     }
 }
