@@ -1,2 +1,2 @@
 export { AuthPage } from "./Auth"
-export { authLocators } from "./locators/locators"
+export { AUTH_LOCATORS } from "./locators/locators"

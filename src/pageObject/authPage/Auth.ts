@@ -3,8 +3,8 @@ import { Page, test } from "@playwright/test";
 import { AuthButtons, AuthInputs } from "./types";
 
 import { TestUser } from "../../testData";
-import { ENDPOINTS } from "../../constants";
-import { authLocators } from "./";
+import { ENDPOINTS } from "../../";
+import { AUTH_LOCATORS } from "./";
 
 
 
@@ -20,13 +20,13 @@ export class AuthPage extends BasePage {
 
         // Поля
         this.inputs = {
-            login: new Input('Username', this.page.locator(authLocators.inputs.login)),
-            password: new Input('Password', this.page.locator(authLocators.inputs.password))
+            login: new Input('Username', this.page.locator(AUTH_LOCATORS.INPUTS.LOGIN)),
+            password: new Input('Password', this.page.locator(AUTH_LOCATORS.INPUTS.PASSWORD))
         }
 
         // Кнопки
         this.buttons = {
-            continue: new Button('LOG IN', this.page.locator(authLocators.buttons.logIn))
+            continue: new Button('LOG IN', this.page.locator(AUTH_LOCATORS.BUTTONS.LOG_IN))
         }
     }
 

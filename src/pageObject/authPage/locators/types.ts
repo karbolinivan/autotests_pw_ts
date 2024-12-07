@@ -1,13 +1,13 @@
 export interface AuthInputsLocators {
-    login: string,
-    password: string
+    LOGIN: string,
+    PASSWORD: string
 }
 
 export interface AuthButtonsLocators {
-    logIn: string
+    LOG_IN: string
 }
 
 export interface AuthLocators {
-    inputs: AuthInputsLocators,
-    buttons: AuthButtonsLocators
+    INPUTS: AuthInputsLocators,
+    BUTTONS: AuthButtonsLocators
 }
