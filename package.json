@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "yarn playwright test",
-    "test:api": "yarn playwright test tests/api",
-    "test:e2e": "yarn playwright test tests/e2e",
+    "test:api": "yarn playwright test --project=api ./tests/api",
+    "test:e2e": "yarn playwright test --project=e2e ./tests/e2e",
     "report": "allure generate allure-results -o allure-report --clean"
   },
   "keywords": [],

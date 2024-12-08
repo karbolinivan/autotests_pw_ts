@@ -1,4 +1,4 @@
-import { Logger } from "../../utils";
+import { Logger } from "./Logger";
 import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from "axios";
 import { HTTPS, API } from "./constants";
 

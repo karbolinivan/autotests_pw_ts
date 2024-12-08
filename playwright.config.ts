@@ -29,8 +29,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: `https://${process.env.BASE_URL}`,
-
+    // baseURL: `https://${process.env.BASE_URL}`,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-first-failure',
     screenshot: 'only-on-failure',
@@ -40,8 +39,17 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'api',
+      use: {
+        browserName: undefined,
+      },
+    },
+    {
+      name: 'e2e',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: `https://${process.env.BASE_URL}`,
+      },
     },
 
     // {
