@@ -10,12 +10,7 @@ export abstract class BaseElement {
         this.locator = locator;
     };
 
-    // Описываем базовые действия с элементами на странице
-
-    /**
-     * Проверяет отображение элемента на странице
-     * @param options
-     */
+    /** Описываем базовые действия с элементами на странице */
     async toBeVisible(options?: ToBeVisibleOptions) {
         await test.step(`Элемент "${this.name}" отображается на странице`, async () => {
             await expect(this.locator).toBeVisible(options);

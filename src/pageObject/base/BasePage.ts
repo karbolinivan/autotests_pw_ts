@@ -8,12 +8,7 @@ export abstract class BasePage {
     this.page = page;
   }
 
-  // Описываем базовые действия со страницей
-
-  /**
-   * Обновление страницы
-   * @param options
-   */
+  /** Описываем базовые действия со страницей */
   async reload(options?: ReloadOptions) {
     await test.step(`Обновление страницы: ${this.page.url()}`, async () => {
       await this.page.reload(options);

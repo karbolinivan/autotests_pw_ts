@@ -14,7 +14,7 @@ test.describe('Авторизация', async() => {
             { name: allure.LabelName.EPIC, value: 'Авторизация и регистрация' },
             { name: allure.LabelName.FEATURE, value: 'Авторизация' },
         );
-        authPage = new Pages().authPage(page);
+        authPage = new Pages(page).auth();
     })
 
     test('Авторизация тестового пользователя', async() => {

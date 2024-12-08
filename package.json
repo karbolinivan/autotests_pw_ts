@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "yarn playwright test",
     "test:api": "yarn playwright test tests/api",
     "test:e2e": "yarn playwright test tests/e2e",
     "report": "allure generate allure-results -o allure-report --clean"
@@ -19,6 +20,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "dotenv": "^16.4.7"
   }
 }

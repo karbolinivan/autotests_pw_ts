@@ -1,12 +1,12 @@
 import { Button, Input } from "../base";
 
-// Инпуты Auth
+/** Инпуты Auth */
 export interface AuthInputs {
     login: Input,
     password: Input,
 }
 
-// Кнопоки Auth
+ /** Кнопоки Auth */
 export interface AuthButtons {
     continue: Button
 }

@@ -1,11 +1,9 @@
 import { BasePage, Button, Input } from "../base";
 import { Page, test } from "@playwright/test";
 import { AuthButtons, AuthInputs } from "./types";
-
 import { TestUser } from "../../testData";
 import { ENDPOINTS } from "../../";
 import { AUTH_LOCATORS } from "./";
-
 
 
 export class AuthPage extends BasePage {
@@ -18,56 +16,40 @@ export class AuthPage extends BasePage {
 
         this.path = ENDPOINTS.AUTH;
 
-        // Поля
+        /** Поля */
         this.inputs = {
             login: new Input('Username', this.page.locator(AUTH_LOCATORS.INPUTS.LOGIN)),
             password: new Input('Password', this.page.locator(AUTH_LOCATORS.INPUTS.PASSWORD))
         }
 
-        // Кнопки
+        /** Кнопки */
         this.buttons = {
             continue: new Button('LOG IN', this.page.locator(AUTH_LOCATORS.BUTTONS.LOG_IN))
         }
     }
 
-    // Базовые действия
-
+    /** Базовые действия */
     public async openAuthPage() {
         await this.goTo(this.path);
     }
 
-    // Действия с полями
-    /**
-     * Заполняет поле логина
-     * @param login
-     */
+    /** Действия с полями */
     public async setLogin(login: string): Promise<void> {
         await this.inputs.login.fill(login);
     }
 
-    /**
-     * Заполняет поле пароля
-     * @param password
-     */
     public async setPassword(password: string): Promise<void> {
         await this.inputs.password.fill(password);
     }
 
 
-    // Действия с кнопками
-    /**
-     * Нажатие на кнопку продолжить
-     */
+    /** Действия с кнопками */
     public async clickOnContinue(): Promise<void> {
         await this.buttons.continue.click();
     }
 
 
-    // Пользовательские действия
-    /**
-     * Авторизует пользователя на ресурсе
-     * @param testUser
-     */
+    /** Пользовательские действия */
     public async authorization(testUser: TestUser): Promise<void> {
         await test.step(`Авторизация пользователя: "${testUser.login}"`, async () => {
             await this.openAuthPage();
