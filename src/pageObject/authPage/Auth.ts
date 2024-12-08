@@ -1,9 +1,9 @@
-import { BasePage, Button, Input } from "../base";
 import { Page, test } from "@playwright/test";
 import { AuthButtons, AuthInputs } from "./types";
 import { TestUser } from "../../testData";
-import { ENDPOINTS } from "../../";
-import { AUTH_LOCATORS } from "./";
+import { ENDPOINTS } from "../constants";
+import { AUTH_LOCATORS } from "./locators/locators";
+import { BasePage, Button, Input } from "../base";
 
 
 export class AuthPage extends BasePage {

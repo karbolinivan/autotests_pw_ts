@@ -1,8 +1,8 @@
 import { test } from "@playwright/test";
 import * as allure from "allure-js-commons";
-import {Accounts} from "../../../src/api/accounts";
-import {Expect} from "../../../src/utils";
-import {HttpStatusCode} from "axios";
+import { Expect } from "../../../src/utils";
+import { HttpStatusCode } from "axios";
+import { Accounts } from "../../../src/api";
 
 
 test.describe('Accounts', async() => {

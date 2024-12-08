@@ -1,4 +1,4 @@
-import {expect, test} from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import { AxiosResponse, HttpStatusCode } from "axios";
 
 export class Expect {

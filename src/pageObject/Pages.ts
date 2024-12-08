@@ -1,5 +1,5 @@
-import { AuthPage } from "./authPage";
 import { Page } from "@playwright/test";
+import { AuthPage } from "./authPage/Auth";
 
 /** Общий класс для доступа ко всем страницам на ресурсе */
 export class Pages {

@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import { AuthPage } from "../../../src/pageObject/authPage"
+import { AuthPage } from "../../../src/pageObject/authPage/Auth";
 import { TEST_USER } from "../../../src/testData";
 import { Pages } from "../../../src/pageObject";
 import * as allure from "allure-js-commons";
